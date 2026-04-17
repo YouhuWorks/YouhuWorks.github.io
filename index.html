@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1200, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>AOH2 - 革命往事MOD | Revolutionary Memories</title>
+    <title>AOH2 - 革命往事MOD | Revolutionary Past</title>
     <style>
         * {
             margin: 0;
@@ -11,39 +11,6 @@
             box-sizing: border-box;
             font-family: "Microsoft YaHei", sans-serif;
         }
-        /* 语言切换悬浮按钮 - 置顶不遮挡内容 */
-        .lang-switch {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 9999;
-            display: flex;
-            gap: 10px;
-            background: #fff;
-            padding: 8px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .lang-btn {
-            padding: 6px 12px;
-            border: 1px solid #eee;
-            border-radius: 4px;
-            background: #f5f5f5;
-            color: #333;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-        }
-        .lang-btn.active {
-            background: #c8102e;
-            color: #fff;
-            border-color: #c8102e;
-        }
-        .lang-btn:hover:not(.active) {
-            border-color: #c8102e;
-            color: #c8102e;
-        }
-        /* 页面整体渐入动画 */
         body {
             background-color: #f5f5f5;
             color: #333;
@@ -166,6 +133,7 @@
             margin-top: 1.5rem;
             transition: background 0.3s;
             min-width: 280px;
+            cursor: pointer;
         }
         .download-btn:hover {
             background: #a00b25;
@@ -237,6 +205,7 @@
         .link-btn {
             background-color: #ffe8e8;
             color: #c8102e;
+            text-decoration: none;
         }
         .link-btn:hover {
             background-color: #ffd6d6;
@@ -286,374 +255,108 @@
             color: #c8102e;
             font-weight: bold;
         }
-        /* 核心：仅显示当前激活语言，其他语言完全隐藏 */
-        .lang-content {
-            display: none;
-        }
-        .lang-content.active {
-            display: block;
-        }
-        /* 行内元素适配（如按钮、小文本） */
-        .inline-lang {
-            display: none;
-        }
-        .inline-lang.active {
-            display: inline;
-        }
     </style>
 </head>
 <body>
-    <!-- 语言切换按钮 - 悬浮右上角 -->
-    <div class="lang-switch">
-        <button class="lang-btn active" data-lang="zh-cn">简体中文</button>
-        <button class="lang-btn" data-lang="zh-tw">繁體中文</button>
-        <button class="lang-btn" data-lang="en">English</button>
+<header class="header">
+    <img src="logo.png" alt="革命往事模组Logo" class="mod-logo">
+    <div class="header-text">
+        <h1>革命往事</h1>
+        <p>《革命往事》 | 回溯1910-1949 见证中华民族的抗争与新生</p>
     </div>
+</header>
+<div class="container">
+    <section class="module-section">
+        <h2>MOD简介</h2>
+        <p>《革命往事》是一款以<strong>中国近现代史</strong>为核心的AOH 2 MOD，时间线横跨辛亥革命的炮火、军阀割据的动荡、全民族抗战的烽火，直至解放战争的胜利与新中国的诞生。</p>
+        <p>模组遵循历史史实，融入海量红色元素与爱国题材内容，通过沉浸式的游戏玩法，让你亲历那段救亡图存、砥砺前行的峥嵘岁月。</p>
+    </section>
 
-    <header class="header">
-        <img src="logo.png" alt="革命往事模组Logo" class="mod-logo">
-        <div class="header-text">
-            <!-- 标题多语言 - 独立块 -->
-            <h1>
-                <span class="inline-lang active" data-lang="zh-cn">革命往事</span>
-                <span class="inline-lang" data-lang="zh-tw">革命往事</span>
-                <span class="inline-lang" data-lang="en">Revolutionary Memories</span>
-            </h1>
-            <p>
-                <span class="inline-lang active" data-lang="zh-cn">《革命往事》 | 回溯1910-1949 见证中华民族的抗争与新生</span>
-                <span class="inline-lang" data-lang="zh-tw">《革命往事》 | 回溯1910-1949 見證中華民族的抗爭與新生</span>
-                <span class="inline-lang" data-lang="en">Revolutionary Memories | 1910-1949, Witness the struggle and rebirth of the Chinese nation</span>
-            </p>
+    <section class="module-section">
+        <h2>核心历史阶段</h2>
+        <ul class="timeline-list">
+            <li><span class="timeline-year">1911-1926</span><span>共和初建与军阀割据：从武昌起义的枪响到北伐战争的号角，见证共和理想在乱世中的坚守。</span></li>
+            <li><span class="timeline-year">1927-1937</span><span>土地革命与民族危亡：南昌城头的枪声、井冈山的星火、长征的壮举，在民族危机中点燃救亡希望。</span></li>
+            <li><span class="timeline-year">1937-1945</span><span>全民族抗战：卢沟桥事变揭开抗战序幕，国共携手、军民同心，浴血奋战迎来最终胜利。</span></li>
+            <li><span class="timeline-year">1945-1949</span><span>解放全中国：从双十协定到三大战役，从渡江战役到新中国成立，终结独裁统治，开启民族新纪元。</span></li>
+        </ul>
+    </section>
+
+    <section class="module-section">
+        <h2>MOD特色</h2>
+        <div class="feature-list">
+            <div class="feature-item"><h3>史实还原</h3><p>考据历史事件、人物与势力版图，让每一次决策都贴合时代背景。</p></div>
+            <div class="feature-item"><h3>红色深融</h3><p>植入经典革命口号，强化爱国情怀与历史使命感。</p></div>
+            <div class="feature-item"><h3>沉浸任务体系</h3><p>围绕关键历史节点设计专属任务，从武昌起义到开国大典，亲历历史转折的每一刻。</p></div>
+            <div class="feature-item"><h3>势力平衡优化</h3><p>基于历史实力调整各方势力参数，让军阀混战、国共合作与决战等玩法更具策略性。</p></div>
         </div>
-    </header>
+    </section>
 
-    <div class="container">
-        <!-- MOD简介 - 简/繁/英独立模块 -->
-        <section class="module-section">
-            <h2>
-                <span class="inline-lang active" data-lang="zh-cn">MOD简介</span>
-                <span class="inline-lang" data-lang="zh-tw">MOD簡介</span>
-                <span class="inline-lang" data-lang="en">MOD Introduction</span>
-            </h2>
-            <div class="lang-content active" data-lang="zh-cn">
-                <p>《革命往事》是一款以<strong>中国近现代史</strong>为核心的AOH 2 MOD，时间线横跨辛亥革命的炮火、军阀割据的动荡、全民族抗战的烽火，直至解放战争的胜利与新中国的诞生。</p>
-                <p>模组遵循历史史实，融入海量红色元素与爱国题材内容，通过沉浸式的游戏玩法，让你亲历那段救亡图存、砥砺前行的峥嵘岁月。</p>
-            </div>
-            <div class="lang-content" data-lang="zh-tw">
-                <p>《革命往事》是一款以<strong>中國近現代史</strong>為核心的AOH 2 MOD，時間線橫跨辛亥革命的炮火、軍閥割據的動盪、全民族抗戰的烽火，直至解放戰爭的勝利與新中國的誕生。</p>
-                <p>模組遵循歷史史實，融入海量紅色元素與愛國題材內容，透過沉浸式的遊戲玩法，讓你親歷那段救亡圖存、砥礪前行的崢嶸歲月。</p>
-            </div>
-            <div class="lang-content" data-lang="en">
-                <p>Revolutionary Memories is an AOH 2 MOD focused on the <strong>modern and contemporary history of China</strong>, spanning from the 1911 Revolution, the warlord separatism, the full-scale War of Resistance Against Japanese Aggression, to the victory of the Liberation War and the founding of the People's Republic of China.</p>
-                <p>The MOD abides by historical facts, integrates a large number of red elements and patriotic themes, and allows you to experience the extraordinary years of national salvation and forging ahead through immersive gameplay.</p>
-            </div>
-        </section>
-
-        <!-- 核心历史阶段 - 简/繁/英独立模块 -->
-        <section class="module-section">
-            <h2>
-                <span class="inline-lang active" data-lang="zh-cn">核心历史阶段</span>
-                <span class="inline-lang" data-lang="zh-tw">核心歷史階段</span>
-                <span class="inline-lang" data-lang="en">Core Historical Stages</span>
-            </h2>
-            <ul class="timeline-list lang-content active" data-lang="zh-cn">
-                <li><span class="timeline-year">1911-1926</span><span>共和初建与军阀割据：从武昌起义的枪响到北伐战争的号角，见证共和理想在乱世中的坚守。</span></li>
-                <li><span class="timeline-year">1927-1937</span><span>土地革命与民族危亡：南昌城头的枪声、井冈山的星火、长征的壮举，在民族危机中点燃救亡希望。</span></li>
-                <li><span class="timeline-year">1937-1945</span><span>全民族抗战：卢沟桥事变揭开抗战序幕，国共携手、军民同心，浴血奋战迎来最终胜利。</span></li>
-                <li><span class="timeline-year">1945-1949</span><span>解放全中国：从双十协定到三大战役，从渡江战役到新中国成立，终结独裁统治，开启民族新纪元。</span></li>
-            </ul>
-            <ul class="timeline-list lang-content" data-lang="zh-tw">
-                <li><span class="timeline-year">1911-1926</span><span>共和初建與軍閥割據：從武昌起義的槍響到北伐戰爭的號角，見證共和理想在亂世中的堅守。</span></li>
-                <li><span class="timeline-year">1927-1937</span><span>土地革命與民族危亡：南昌城頭的槍聲、井岡山的星火、長征的壯舉，在民族危機中點燃救亡希望。</span></li>
-                <li><span class="timeline-year">1937-1945</span><span>全民族抗戰：盧溝橋事變揭開抗戰序幕，國共攜手、軍民同心，浴血奮戰迎來最終勝利。</span></li>
-                <li><span class="timeline-year">1945-1949</span><span>解放全中國：從雙十協定到三大戰役，從渡江戰役到新中國成立，終結獨裁統治，開啟民族新紀元。</span></li>
-            </ul>
-            <ul class="timeline-list lang-content" data-lang="en">
-                <li><span class="timeline-year">1911-1926</span><span>Founding of the Republic & Warlord Separatism: From the Wuchang Uprising to the Northern Expedition, witness the perseverance of republican ideals in troubled times.</span></li>
-                <li><span class="timeline-year">1927-1937</span><span>Land Revolution & National Crisis: The gunshots in Nanchang, the spark in Jinggangshan, the feat of the Long March, ignite the hope of national salvation in the national crisis.</span></li>
-                <li><span class="timeline-year">1937-1945</span><span>Full-scale National Resistance War: The Lugou Bridge Incident opened the prelude to the war, the KMT and CCP joined hands, the military and civilians were of one heart, and fought bloody battles for the final victory.</span></li>
-                <li><span class="timeline-year">1945-1949</span><span>Liberation of China: From the Double Tenth Agreement to the Three Major Campaigns, from the Crossing the Yangtze Campaign to the founding of New China, end the autocratic rule and open a new era for the nation.</span></li>
-            </ul>
-        </section>
-
-        <!-- MOD特色 - 简/繁/英独立模块 -->
-        <section class="module-section">
-            <h2>
-                <span class="inline-lang active" data-lang="zh-cn">MOD特色</span>
-                <span class="inline-lang" data-lang="zh-tw">MOD特色</span>
-                <span class="inline-lang" data-lang="en">MOD Features</span>
-            </h2>
-            <div class="feature-list lang-content active" data-lang="zh-cn">
-                <div class="feature-item"><h3>史实还原</h3><p>考据历史事件、人物与势力版图，让每一次决策都贴合时代背景。</p></div>
-                <div class="feature-item"><h3>红色深融</h3><p>植入经典革命口号，强化爱国情怀与历史使命感。</p></div>
-                <div class="feature-item"><h3>沉浸任务体系</h3><p>围绕关键历史节点设计专属任务，从武昌起义到开国大典，亲历历史转折的每一刻。</p></div>
-                <div class="feature-item"><h3>势力平衡优化</h3><p>基于历史实力调整各方势力参数，让军阀混战、国共合作与决战等玩法更具策略性。</p></div>
-            </div>
-            <div class="feature-list lang-content" data-lang="zh-tw">
-                <div class="feature-item"><h3>史實還原</h3><p>考據歷史事件、人物與勢力版圖，讓每一次決策都貼合時代背景。</p></div>
-                <div class="feature-item"><h3>紅色深融</h3><p>植入經典革命口號，強化愛國情懷與歷史使命感。</p></div>
-                <div class="feature-item"><h3>沉浸任務體系</h3><p>圍繞關鍵歷史節點設計專屬任務，從武昌起義到開國大典，親歷歷史轉折的每一刻。</p></div>
-                <div class="feature-item"><h3>勢力平衡優化</h3><p>基於歷史實力調整各方勢力參數，讓軍閥混戰、國共合作與決戰等玩法更具策略性。</p></div>
-            </div>
-            <div class="feature-list lang-content" data-lang="en">
-                <div class="feature-item"><h3>Historical Restoration</h3><p>Research historical events, figures and power territories, making every decision fit the historical background.</p></div>
-                <div class="feature-item"><h3>Red Culture Integration</h3><p>Embed classic revolutionary slogans to strengthen patriotic feelings and historical mission.</p></div>
-                <div class="feature-item"><h3>Immersive Task System</h3><p>Design exclusive tasks around key historical nodes, from the Wuchang Uprising to the founding ceremony, experience every moment of historical turning point.</p></div>
-                <div class="feature-item"><h3>Force Balance Optimization</h3><p>Adjust the parameters of all forces based on historical strength, making the gameplay of warlord scuffles, KMT-CCP cooperation and decisive battles more strategic.</p></div>
-            </div>
-        </section>
-
-        <!-- 更新日志 - 简/繁/英独立模块 -->
-        <section class="module-section changelog-section">
-            <h2>
-                <span class="inline-lang active" data-lang="zh-cn">MOD更新日志(功能更新/添加日志)📼</span>
-                <span class="inline-lang" data-lang="zh-tw">MOD更新日誌(功能更新/新增日誌)📼</span>
-                <span class="inline-lang" data-lang="en">MOD Update Log (Function Update/Addition)📼</span>
-            </h2>
-            <div class="lang-content active" data-lang="zh-cn">
-                <ul class="changelog-list">
-                    <li class="changelog-item">
-                        <span class="changelog-version">V01（初始版本）</span>
-                        <div class="changelog-content">
-                            【2025.09.06 】完成模组核心框架搭建，覆盖1911-1949全历史阶段；<br>
-                            【2025.09.12】添加武昌起义(辛亥革命)等“1910年-1912年”历史事件；<br>
-                            【2025.10.03】构建“革命往事MOD官方网页”；<br>
-                            【2025.10.26】修复异常黑屏死机BUG；<br>
-                            【2025.10.31】发现游戏编辑器中无法查看已有国家、点击创建国家按钮自动返回主界面、使用核弹出现异常报错、游戏加载界面的名言显示异常、无法使用中文键盘、弹出事件时黑屏、不播放音乐和音频播放错误 BUG问题并列入修复名单；<br>
-                            【2025.11.01】修复游戏不播放音乐及音频播放错误bug问题；<br>
-                            【2025.11.03】修复无法使用中文键盘bug；<br>
-                            【2025.11.06】修复弹出事件时黑屏bug；<br>
-                            【2025.12.11】修改叛军数值，避免其出现无节制(离谱的程度）叛乱的恶性循环bug；<br>
-                            【2025.12.15】修复中文缺字bug问题；<br>
-                            【2025.12.21】修复美国无缘无故转法西斯主义的bug；<br>
-                            【2025.12.27】修复创建国家黑屏闪退或返回主界面的bug；<br>
-                            【2025.12.27】优化游戏性能与体验问题；<br>
-                            【2026.01.01】修复游戏界面无缘无故跳转的bug<br>
-                            【2026.01.06】修复了超事件无法显示的bug<br>
-                            【2026.02.19】修复地块崩溃bug<br>
-                            【2026.03.05】删除40000余字节无效文本<br>
-                            【2026.03.07】开启MOD限量测试（6份/6份）<br>
-                            【2026.03.12】撰写10000余字节事件文本<br>
-                            【2026.03.13】收集测试玩家意见反馈<br>
-                            【2026.03.13】更新革命往事MOD网页版本<span class="version-tag">「V0.9→V1.326.236.968」</span><br>
-                            ✯✯✯创作不易，望您支持(若您在游戏中遇到了bug问题或对本MOD有任何建议请根据该网页最下端的“联系我们”所提供的QQ邮箱向我们发送建议。具体更新及修复的项目以下方所提供的q群内的消息为准)✯✯✯
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="lang-content" data-lang="zh-tw">
-                <ul class="changelog-list">
-                    <li class="changelog-item">
-                        <span class="changelog-version">V01（初始版本）</span>
-                        <div class="changelog-content">
-                            【2025.09.06 】完成模組核心框架建構，覆蓋1911-1949全歷史階段；<br>
-                            【2025.09.12】新增武昌起義(辛亥革命)等「1910年-1912年」歷史事件；<br>
-                            【2025.10.03】建構「革命往事MOD官方網頁」；<br>
-                            【2025.10.26】修復異常黑屏當機BUG；<br>
-                            【2025.10.31】發現遊戲編輯器中無法查看已有國家、點擊創建國家按鈕自動返回主介面、使用核彈出現異常報錯、遊戲加載介面的名言顯示異常、無法使用中文鍵盤、彈出事件時黑屏、不播放音樂和音頻播放錯誤 BUG問題並列入修復名單；<br>
-                            【2025.11.01】修復遊戲不播放音樂及音頻播放錯誤bug問題；<br>
-                            【2025.11.03】修復無法使用中文鍵盤bug；<br>
-                            【2025.11.06】修復彈出事件時黑屏bug；<br>
-                            【2025.12.11】修改叛軍數值，避免其出現無節制(離譜的程度）叛亂的惡性循環bug；<br>
-                            【2025.12.15】修復中文缺字bug問題；<br>
-                            【2025.12.21】修復美國無緣無故轉法西斯主義的bug；<br>
-                            【2025.12.27】修復創建國家黑屏閃退或返回主介面的bug；<br>
-                            【2025.12.27】優化遊戲效能與體驗問題；<br>
-                            【2026.01.01】修復遊戲介面無緣無故跳轉的bug<br>
-                            【2026.01.06】修復了超事件無法顯示的bug<br>
-                            【2026.02.19】修復地塊崩潰bug<br>
-                            【2026.03.05】刪除40000餘位元組無效文本<br>
-                            【2026.03.07】開啟MOD限量測試（6份/6份）<br>
-                            【2026.03.12】撰寫10000餘位元組事件文本<br>
-                            【2026.03.13】收集測試玩家意見回饋<br>
-                            【2026.03.13】更新革命往事MOD網頁版本<span class="version-tag">「V0.9→V1.326.236.968」</span><br>
-                            ✯✯✯創作不易，望您支持(若您在遊戲中遇到了bug問題或對本MOD有任何建議請根據該網頁最下端的「聯繫我們」所提供的QQ信箱向我們發送建議。具體更新及修復的項目以下方所提供的q群內的消息為準)✯✯✯
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="lang-content" data-lang="en">
-                <ul class="changelog-list">
-                    <li class="changelog-item">
-                        <span class="changelog-version">V01 (Initial Version)</span>
-                        <div class="changelog-content">
-                            【2025.09.06 】Complete the construction of the MOD core framework, covering the entire historical stage of 1911-1949;<br>
-                            【2025.09.12】Add historical events of "1910-1912" such as the Wuchang Uprising (1911 Revolution);<br>
-                            【2025.10.03】Build the "Revolutionary Memories MOD Official Website";<br>
-                            【2025.10.26】Fix the abnormal black screen and crash BUG;<br>
-                            【2025.10.31】Found and listed BUGs: unable to view existing countries in the game editor, automatically return to the main interface when clicking the create country button, abnormal errors when using nuclear bombs, abnormal display of famous quotes on the game loading interface, unable to use Chinese keyboard, black screen when popping up events, no music playback and audio playback errors;<br>
-                            【2025.11.01】Fix the bug of no music playback and audio playback errors;<br>
-                            【2025.11.03】Fix the bug of unable to use Chinese keyboard;<br>
-                            【2025.11.06】Fix the black screen bug when popping up events;<br>
-                            【2025.12.11】Modify rebel values to avoid the vicious circle bug of unrestrained (excessive) rebellion;<br>
-                            【2025.12.15】Fix the Chinese character missing bug;<br>
-                            【2025.12.21】Fix the bug of the United States turning to fascism for no reason;<br>
-                            【2025.12.27】Fix the bug of black screen crash or return to the main interface when creating a country;<br>
-                            【2025.12.27】Optimize game performance and experience issues;<br>
-                            【2026.01.01】Fix the bug of random jump of the game interface<br>
-                            【2026.01.06】Fix the bug that super events cannot be displayed<br>
-                            【2026.02.19】Fix the plot crash bug<br>
-                            【2026.03.05】Delete more than 40,000 bytes of invalid text<br>
-                            【2026.03.07】Launch MOD limited test (6/6 copies)<br>
-                            【2026.03.12】Write more than 10,000 bytes of event text<br>
-                            【2026.03.13】Collect feedback from test players<br>
-                            【2026.03.13】Update the version of Revolutionary Memories MOD official website<span class="version-tag">「V0.9→V1.326.236.968」</span><br>
-                            ✯✯✯Creation is not easy, thank you for your support (If you encounter any bugs in the game or have any suggestions for this MOD, please send your suggestions to our QQ email provided in the "Contact Us" at the bottom of this website. The specific updated and fixed items are subject to the messages in the QQ group provided below)✯✯✯
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- 下载体验 - 简/繁/英独立模块 -->
-        <section class="module-section download-section">
-            <h2>
-                <span class="inline-lang active" data-lang="zh-cn">💾下载体验📂</span>
-                <span class="inline-lang" data-lang="zh-tw">💾下載體驗📂</span>
-                <span class="inline-lang" data-lang="en">💾Download & Experience📂</span>
-            </h2>
-            <div class="lang-content active" data-lang="zh-cn">
-                <p>获取 AOH 2革命往事MOD，重回那段波澜壮阔的历史岁月</p>
-                <a href="https://pan.baidu.com/s/1zF8lH3nrKDeASSepP5dsVg">立即下载</a>
-                <p class="qgroup-info">QQ交流群：<strong>276985682</strong></p>
-                <p style="margin-top: 0.5rem; font-size: 0.9rem;">群名称：文2【革命往事REVMEM】交流合作社</p>
-                <p style="margin-top: 1rem;">版本：以实际为准 | 适配 AOH2 PC端/MOB端</p>
-            </div>
-            <div class="lang-content" data-lang="zh-tw">
-                <p>取得 AOH 2革命往事MOD，重回那段波瀾壯闊的歷史歲月</p>
-                <a href="https://pan.baidu.com/s/1zF8lH3nrKDeASSepP5dsVg">立即下載</a>
-                <p class="qgroup-info">QQ交流群：<strong>276985682</strong></p>
-                <p style="margin-top: 0.5rem; font-size: 0.9rem;">群名稱：文2【革命往事REVMEM】交流合作社</p>
-                <p style="margin-top: 1rem;">版本：以實際為準 | 適配 AOH2 PC端/MOB端</p>
-            </div>
-            <div class="lang-content" data-lang="en">
-                <p>Get AOH 2 Revolutionary Memories MOD, return to that magnificent historical era</p>
-                <a href="https://pan.baidu.com/s/1zF8lH3nrKDeASSepP5dsVg">Download Now</a>
-                <p class="qgroup-info">QQ Communication Group：<strong>276985682</strong></p>
-                <p style="margin-top: 0.5rem; font-size: 0.9rem;">Group Name: W2 [RevMem] Communication Cooperative</p>
-                <p style="margin-top: 1rem;">Version: Subject to actual | Adapt to AOH2 PC/MOB</p>
-            </div>
-        </section>
-
-        <!-- 联系我们 - 简/繁/英独立模块 -->
-        <section class="contact-section">
-            <h2>
-                <span class="inline-lang active" data-lang="zh-cn">✉📨联系我们📮</span>
-                <span class="inline-lang" data-lang="zh-tw">✉📨聯繫我們📮</span>
-                <span class="inline-lang" data-lang="en">✉📨Contact Us📮</span>
-            </h2>
-            <div class="lang-content active" data-lang="zh-cn">
-                <div class="contact-list">
-                    <div class="contact-item">
-                        <span class="contact-label">QQ交流群号</span>
-                        <span class="contact-value">276985682</span>
-                        <div class="qq-btn-group">
-                            <button class="qq-btn manual-btn" onclick="showQqTip()">手动输入</button>
-                            <a href="https://qun.qq.com/universal-share/share?ac=1&authKey=EeCW3%2BIdsstTAYolQE6w8mVkfFZhAbqQ4RSgypzz9pfhnNFNBHA88PUTaJySz8RT&busi_data=eyJncm91cENvZGUiOiIyNzY5ODU2ODIiLCJ0b2tlbiI6Im85c21ZQzVma1R6MmFXZDFtd2ozVkgrRXlmZnhHNlcxZkFDYSs5WUVWb3R4MVpITHUxT1NpMTdSVEM5UXNHM2YiLCJ1aW4iOiIzODg1MDI2MDU5In0%3D&data=FLzNbwzTybXM0UywQNxDR_Osod_TQ5RQBTv_ea3aI0krI-zEp4GQFMqItNaw5U8_zYNkEV3ZegbsgGmNt7G5MQ&svctype=4&tempid=h5_group_info" class="qq-btn link-btn">链接跳转加入群聊</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-label">📨反馈邮箱✉️</span>
-                        <a href="mailto:3885026059@qq.com?subject=【革命往事MOD反馈📧 | 反馈类型:默认📝】" class="contact-value" target="_blank">3885026059@qq.com</a>
-                    </div>
+    <section class="module-section changelog-section">
+        <h2>MOD更新日志(功能更新/添加日志)📼</h2>
+        <ul class="changelog-list">
+            <li class="changelog-item">
+                <span class="changelog-version">V0.2（内测版）</span>
+                <div class="changelog-content">
+                    【2025.09.06 】完成模组核心框架搭建，覆盖1911-1949全历史阶段；<br>
+                    【2025.09.12】添加武昌起义(辛亥革命)等“1910年-1912年”历史事件；<br>
+                    【2025.10.03】构建“革命往事MOD官方网页”；<br>
+                    【2025.10.26】修复异常黑屏死机BUG；<br>
+                    【2025.10.31】发现游戏编辑器中无法查看已有国家、点击创建国家按钮自动返回主界面、使用核弹出现异常报错、游戏加载界面的名言显示异常、无法使用中文键盘、弹出事件时黑屏、不播放音乐和音频播放错误 BUG问题并列入修复名单；<br>
+                    【2025.11.01】修复游戏不播放音乐及音频播放错误bug问题；<br>
+                    【2025.11.03】修复无法使用中文键盘bug；<br>
+                    【2025.11.06】修复弹出事件时黑屏bug；<br>
+                    【2025.12.11】修改叛军数值，避免其出现无节制(离谱的程度）叛乱的恶性循环bug；<br>
+                    【2025.12.15】修复中文缺字bug问题；<br>
+                    【2025.12.21】修复美国无缘无故转法西斯主义的bug；<br>
+                    【2025.12.27】修复创建国家黑屏闪退或返回主界面的bug；<br>
+                    【2025.12.27】优化游戏性能与体验问题；<br>
+                    【2026.01.01】修复游戏界面无缘无故跳转的bug<br>
+                    【2026.01.06】修复了超事件无法显示的bug<br>
+                    【2026.02.19】修复地块崩溃bug<br>
+                    【2026.03.05】删除40000余字节无效文本<br>
+                    【2026.03.07】开启MOD限量测试（6份/6份）<br>
+                    【2026.03.12】撰写10000余字节事件文本<br>
+                    【2026.03.13】收集测试玩家意见反馈<br>
+                    【2026.03.13】更新革命往事MOD网页版本
+                    【2026.04.12】补充以及完善MOD部分图片并校正<span class="version-tag">「V0.9→V1.326.236.968」</span><br>
+                    ✯✯✯创作不易，望您支持(若您在游戏中遇到了bug问题或对本MOD有任何建议请根据该网页最下端的“联系我们”所提供的QQ邮箱向我们发送建议。具体更新及修复的项目以下方所提供的q群内的消息为准)✯✯✯
                 </div>
-                <p class="contact-tip">建议在邮件中注明【模组反馈】+ 问题/建议类型，我们将尽快回复</p>
-            </div>
-            <div class="lang-content" data-lang="zh-tw">
-                <div class="contact-list">
-                    <div class="contact-item">
-                        <span class="contact-label">QQ交流群號</span>
-                        <span class="contact-value">276985682</span>
-                        <div class="qq-btn-group">
-                            <button class="qq-btn manual-btn" onclick="showQqTip()">手動輸入</button>
-                            <a href="https://qun.qq.com/universal-share/share?ac=1&authKey=EeCW3%2BIdsstTAYolQE6w8mVkfFZhAbqQ4RSgypzz9pfhnNFNBHA88PUTaJySz8RT&busi_data=eyJncm91cENvZGUiOiIyNzY5ODU2ODIiLCJ0b2tlbiI6Im85c21ZQzVma1R6MmFXZDFtd2ozVkgrRXlmZnhHNlcxZkFDYSs5WUVWb3R4MVpITHUxT1NpMTdSVEM5UXNHM2YiLCJ1aW4iOiIzODg1MDI2MDU5In0%3D&data=FLzNbwzTybXM0UywQNxDR_Osod_TQ5RQBTv_ea3aI0krI-zEp4GQFMqItNaw5U8_zYNkEV3ZegbsgGmNt7G5MQ&svctype=4&tempid=h5_group_info" class="qq-btn link-btn">連結跳轉加入群聊</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-label">📨回饋信箱✉️</span>
-                        <a href="mailto:3885026059@qq.com?subject=【革命往事MOD回饋📧 | 回饋類型:預設📝】" class="contact-value" target="_blank">3885026059@qq.com</a>
-                    </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="module-section download-section">
+        <h2>💾下载体验📂</h2>
+        <p>获取 AOH 2革命往事MOD，重回那段波澜壮阔的历史岁月</p>
+        <a href="https://pan.baidu.com/s/1zF8lH3nrKDeASSepP5dsVg" class="download-btn" target="_blank">立即下载</a>
+        <p class="qgroup-info">QQ交流群：<strong>276985682</strong></p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">群名称：文2【革命往事REVMEM】交流合作社</p>
+        <p style="margin-top: 1rem;">版本：以实际为准 | 适配 AOH2 PC端/MOB端</p>
+    </section>
+
+    <section class="contact-section">
+        <h2>✉📨联系我们📮</h2>
+        <div class="contact-list">
+            <div class="contact-item">
+                <span class="contact-label">QQ交流群号</span>
+                <span class="contact-value">276985682</span>
+                <div class="qq-btn-group">
+                    <button class="qq-btn manual-btn" onclick="alert('请打开QQ，点击【加群】输入群号276985682，申请后等待管理员审核👨‍💻')">手动输入</button>
+                    <a href="https://qun.qq.com/universal-share/share?ac=1&authKey=EeCW3%2BIdsstTAYolQE6w8mVkfFZhAbqQ4RSgypzz9pfhnNFNBHA88PUTaJySz8RT&busi_data=eyJncm91cENvZGUiOiIyNzY5ODU2ODIiLCJ0b2tlbiI6Im85c21ZQzVma1R6MmFXZDFtd2ozVkgrRXlmZnhHNlcxZkFDYSs5WUVWb3R4MVpITHUxT1NpMTdSVEM5UXNHM2YiLCJ1aW4iOiIzODg1MDI2MDU5In0%3D&data=FLzNbwzTybXM0UywQNxDR_Osod_TQ5RQBTv_ea3aI0krI-zEp4GQFMqItNaw5U8_zYNkEV3ZegbsgGmNt7G5MQ&svctype=4&tempid=h5_group_info" class="qq-btn link-btn" target="_blank">链接跳转加入群聊</a>
                 </div>
-                <p class="contact-tip">建議在信件中註明【模組回饋】+ 問題/建議類型，我們將儘快回覆</p>
             </div>
-            <div class="lang-content" data-lang="en">
-                <div class="contact-list">
-                    <div class="contact-item">
-                        <span class="contact-label">QQ Group Number</span>
-                        <span class="contact-value">276985682</span>
-                        <div class="qq-btn-group">
-                            <button class="qq-btn manual-btn" onclick="showQqTip()">Enter Manually</button>
-                            <a href="https://qun.qq.com/universal-share/share?ac=1&authKey=EeCW3%2BIdsstTAYolQE6w8mVkfFZhAbqQ4RSgypzz9pfhnNFNBHA88PUTaJySz8RT&busi_data=eyJncm91cENvZGUiOiIyNzY5ODU2ODIiLCJ0b2tlbiI6Im85c21ZQzVma1R6MmFXZDFtd2ozVkgrRXlmZnhHNlcxZkFDYSs5WUVWb3R4MVpITHUxT1NpMTdSVEM5UXNHM2YiLCJ1aW4iOiIzODg1MDI2MDU5In0%3D&data=FLzNbwzTybXM0UywQNxDR_Osod_TQ5RQBTv_ea3aI0krI-zEp4GQFMqItNaw5U8_zYNkEV3ZegbsgGmNt7G5MQ&svctype=4&tempid=h5_group_info" class="qq-btn link-btn">Join via Link</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-label">📨Feedback Email✉️</span>
-                        <a href="mailto:3885026059@qq.com?subject=【Revolutionary Memories MOD Feedback📧 | Type:Default📝】" class="contact-value" target="_blank">3885026059@qq.com</a>
-                    </div>
-                </div>
-                <p class="contact-tip">It is recommended to mark [MOD Feedback] + question/suggestion type in the email, we will reply as soon as possible</p>
+            <div class="contact-item">
+                <span class="contact-label">📨反馈邮箱✉️</span>
+                <a href="mailto:3885026059@qq.com?subject=【革命往事MOD反馈📧 | 反馈类型:默认📝】" class="contact-value" target="_blank">3885026059@qq.com</a>
             </div>
-        </section>
-    </div>
-
-    <!-- 页脚 - 简/繁/英独立模块 -->
-    <footer class="footer">
-        <div class="lang-content active" data-lang="zh-cn">
-            <p>© 2025 AOH 2 革命往事MOD ✕ 虎星创MOD制作组 版权所有  | 网页版本：<span class="version-tag">V1.326.236.968</span></p>
         </div>
-        <div class="lang-content" data-lang="zh-tw">
-            <p>© 2025 AOH 2 革命往事MOD ✕ 虎星創MOD製作組 版權所有  | 網頁版本：<span class="version-tag">V1.326.236.968</span></p>
-        </div>
-        <div class="lang-content" data-lang="en">
-            <p>© 2025 AOH 2 Revolutionary Memories MOD ✕ Huxingchuang MOD Team All Rights Reserved  |  Website Version：<span class="version-tag">V1.326.236.968</span></p>
-        </div>
-    </footer>
+        <p class="contact-tip">建议在邮件中注明【模组反馈】+ 问题/建议类型，我们将尽快回复</p>
+    </section>
+</div>
 
-    <script>
-        // 核心：语言切换逻辑 - 仅激活当前语言，其他完全隐藏
-        const langBtns = document.querySelectorAll('.lang-btn');
-        const langContentBlocks = document.querySelectorAll('.lang-content');
-        const inlineLangTexts = document.querySelectorAll('.inline-lang');
-
-        // 语言切换主函数
-        function switchLang(targetLang) {
-            // 1. 切换按钮激活状态
-            langBtns.forEach(btn => {
-                btn.classList.toggle('active', btn.getAttribute('data-lang') === targetLang);
-            });
-            // 2. 切换块级内容（简介、历史阶段、特色等）
-            langContentBlocks.forEach(block => {
-                block.classList.toggle('active', block.getAttribute('data-lang') === targetLang);
-            });
-            // 3. 切换行内内容（标题、按钮文字等）
-            inlineLangTexts.forEach(text => {
-                text.classList.toggle('active', text.getAttribute('data-lang') === targetLang);
-            });
-            // 4. 修改页面全局lang属性，符合语义化
-            document.documentElement.lang = targetLang;
-        }
-
-        // 绑定按钮点击事件
-        langBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const targetLang = btn.getAttribute('data-lang');
-                switchLang(targetLang);
-            });
-        });
-
-        // QQ加群提示 - 跟随当前语言切换
-        function showQqTip() {
-            const currentLang = document.documentElement.lang;
-            let tipText = '';
-            if (currentLang === 'zh-cn') {
-                tipText = "请打开QQ，点击【加群】输入群号276985682，申请后等待管理员审核👨‍💻";
-            } else if (currentLang === 'zh-tw') {
-                tipText = "請開啟QQ，點擊【加群】輸入群號276985682，申請後等待管理員審核👨‍💻";
-            } else {
-                tipText = "Please open QQ, click [Add Group], enter the group number 276985682, wait for administrator review after application👨‍💻";
-            }
-            alert(tipText);
-        }
-    </script>
+<footer class="footer">
+    <p>© 2025 AOH 2 革命往事MOD ✕ 虎星创MOD制作组 版权所有  | 网页版本：<span class="version-tag">V1.326.236.968</span></p>
+</footer>
 </body>
 </html>
